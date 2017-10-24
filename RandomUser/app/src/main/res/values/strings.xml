@@ -8,6 +8,10 @@
         <item>Female</item>
     </string-array>
     <string name="prompt_nat">Choose a nationality</string>
+    <string name="locationtxt">Location</string>
+    <string name="user_nametxt">Name</string>
+    <string name="user_ntxt">Username</string>
+    <string name="pass_txt">Password</string>
     <string-array name="nat_array">
         <item>AU</item>
         <item>BR</item>
@@ -24,6 +28,12 @@
         <item>NZ</item>
         <item>TR</item>
         <item>UR</item>
+    </string-array>
+
+
+    <string-array name="lego_array">
+        <item>Human</item>
+        <item>Lego</item>
     </string-array>
 
 </resources>
