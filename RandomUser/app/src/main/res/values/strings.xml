@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Random User</string>
+    <string name="btnN">generate</string>
+
+    <string name="prompt_gender">Choose a gender</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="prompt_nat">Choose a nationality</string>
+    <string-array name="nat_array">
+        <item>AU</item>
+        <item>BR</item>
+        <item>CA</item>
+        <item>CH</item>
+        <item>DE</item>
+        <item>DK</item>
+        <item>ES</item>
+        <item>FI</item>
+        <item>FR</item>
+        <item>GB</item>
+        <item>IE</item>
+        <item>NL</item>
+        <item>NZ</item>
+        <item>TR</item>
+        <item>UR</item>
+    </string-array>
+
+</resources>
