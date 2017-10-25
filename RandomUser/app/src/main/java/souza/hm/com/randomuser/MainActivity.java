@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     {
 //
         String requestUrl;
-        if (lepick=="Human")
+        if (lepick.equals("Human"))
         {
              requestUrl = "https://randomuser.me/api/?gender="+genderpick+"&nat="+natpick;
         }else
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 if (rootObj != null) {
 
-                                    nomeUser.setText(ge_name.get("first").toString()+" "+ge_name.get("last").toString());
+                                    nomeUser.setText(getText(R.string.user_nametxt)+": "+ge_name.get("first").toString()+" "+ge_name.get("last").toString());
                                     state.setText(ge_location.get("city").toString()+"-"+ge_location.get("state").toString());
                                     nickname.setText("Username: "+ge_login.get("username").toString());
                                     password.setText("Password: "+ge_login.get("password").toString());
@@ -134,4 +134,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //
+    //
+    void capture(View view)
+    {
+
+    }
 }

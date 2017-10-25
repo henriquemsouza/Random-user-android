@@ -2,37 +2,40 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CLid"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="souza.hm.com.randomuser.MainActivity">
 
     <LinearLayout
+        android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:id="@+id/search_layout"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <Spinner
             android:id="@+id/spinnerGender"
-            android:entries="@array/gender_array"
-            android:prompt="@string/prompt_gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="8" />
+            android:layout_weight="8"
+            android:entries="@array/gender_array"
+            android:prompt="@string/prompt_gender" />
+
         <Spinner
             android:id="@+id/spinnerNAT"
-            android:entries="@array/nat_array"
-            android:prompt="@string/prompt_nat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="8" />
+            android:layout_weight="8"
+            android:entries="@array/nat_array"
+            android:prompt="@string/prompt_nat" />
+
         <Spinner
             android:id="@+id/spinnerLEG"
-            android:entries="@array/lego_array"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="8" />
+            android:layout_weight="8"
+            android:entries="@array/lego_array" />
 
 
     </LinearLayout>
@@ -42,9 +45,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/search_layout"
-        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="70dp"
         android:layout_weight="10"
-        android:text="@string/btnN" />
+        android:background="@android:color/black"
+        android:text="@string/btnN"
+        android:textColor="@android:color/white"
+        android:textSize="19sp" />
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_user_info"
@@ -137,6 +145,32 @@
             </RelativeLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/FabBtnID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="25dp"
+
+        android:clickable="true"
+        app:backgroundTint="@android:color/black"
+        app:elevation="2dp"
+        app:fabSize="normal"
+        app:layout_anchor="@+id/ANC"
+        app:layout_anchorGravity="bottom|right"
+        app:rippleColor="@android:color/white"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+
+    <TextView
+        android:id="@+id/ANC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp" />
 
 
 </android.support.design.widget.CoordinatorLayout>
