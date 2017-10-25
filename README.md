@@ -1,4 +1,4 @@
-# randomuser.me/api  applied on an android aplcativo
+# randomuser.me/api  applied in an android app
 ***
 ***
 ## how to run the project:
