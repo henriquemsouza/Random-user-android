@@ -1,8 +1,8 @@
 package souza.hm.com.randomuser;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
@@ -10,20 +10,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
-
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,9 +36,7 @@ public class MainActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-//                https://randomuser.me/api/?gender=male&nat=br
-//                https://randomuser.me/api/?gender=male&nat=br&lego
+                clearInfo();
                 GeneratePerson(String.valueOf(spgender.getSelectedItem()),String.valueOf(spNat.getSelectedItem()),String.valueOf(spLeg.getSelectedItem()));
 
             }
@@ -52,18 +45,16 @@ public class MainActivity extends AppCompatActivity {
     }
     //render view to bitmap android
 
-    //
     void GeneratePerson(String genderpick, String natpick,String lepick)
     {
-//
+
         String requestUrl;
-        if (lepick.equals("Human"))
-        {
-             requestUrl = "https://randomuser.me/api/?gender="+genderpick+"&nat="+natpick;
-        }else
-            {
-                requestUrl = "https://randomuser.me/api/?gender="+genderpick+"&nat="+natpick+"&lego";
-            }
+        if (lepick.equals("Human")){
+            requestUrl = "https://randomuser.me/api/?gender=" + genderpick + "&nat=" + natpick;
+        }
+        else {
+            requestUrl = "https://randomuser.me/api/?gender=" + genderpick + "&nat=" + natpick + "&lego";
+        }
 
 
         OkHttpClient client = new OkHttpClient();
@@ -130,13 +121,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        //
+
     }
 
-    //
-    //
-    void capture(View view)
+
+    private void clearInfo()
     {
-
+        TextView nomeUser = (TextView) findViewById(R.id.user_name);
+        TextView state = (TextView) findViewById(R.id.user_state);
+        TextView nickname = (TextView) findViewById(R.id.nick_name);
+        TextView password = (TextView) findViewById(R.id.password);
+        ImageView userAvatar = (ImageView) findViewById((R.id.user_avatar));
+        nomeUser.setText(getText(R.string.Load_msg));
+        state.setText("");
+        nickname.setText("");
+        password.setText("");
+        userAvatar.setImageResource(android.R.color.transparent);
     }
+
 }

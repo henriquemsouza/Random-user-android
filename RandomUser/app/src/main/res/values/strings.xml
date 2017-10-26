@@ -12,6 +12,7 @@
     <string name="user_nametxt">Name</string>
     <string name="user_ntxt">Username</string>
     <string name="pass_txt">Password</string>
+    <string name="Load_msg">Loading Content</string>
     <string-array name="nat_array">
         <item>AU</item>
         <item>BR</item>
